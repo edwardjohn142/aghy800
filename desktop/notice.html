@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./micro.css">
+    <link rel="stylesheet" href="style.dashboard.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./micromodal.min.js"></script>
+
+</head>
+<body>
+    <div class="header main">
+        <div class="layout">
+             <ul class="layout  justify-center">
+                <li ><a href="/">Home</a></li>
+                <li class="active"><a href="/withdraw.html" class="">Transactions</a></li>
+                <li ><a href="/security.html" class="">Information</a></li>
+             </ul>
+
+        </div>
+    </div>
+    <div class="main-layout">
+        <div class="header row">
+            <div class="side layout">
+                <div class="logo"></div>
+            </div>
+            <div class="center">
+               <div class="banner"></div>
+            </div>
+        </div>
+        <div class="main-dashboard">
+            <div class="side layout">
+                <ul>
+                    <li ><a href="withdraw.html">Withdraw</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="point.html">Point Management</a></li>
+                    <li ><a href="event.html">Events</a></li>
+                    <li class="active"><a href="notice.html">Notice</a></li>
+                    <li><a href="guide.html">Game Guide</a></li>
+                </ul>
+            </div>
+            <div class="center">
+                <div class="wrapper">
+                    <div class="custom-table header">
+                        <table>
+                            <colgroup>
+                                <col name="date" width="20%"> 
+                                <col name="content" width="60%"> 
+                                <col name="status" width="20%"> 
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th colspan="1" class="date">No</th>
+                                    <th colspan="1" class="content">Title</th>
+                                    <th colspan="1" class="status">Date</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="custom-table body">
+                        <table cellspacing="0">
+                            <colgroup>
+                                <col name="date" width="20%"> 
+                                <col name="content" width="60%"> 
+                                <col name="status" width="20%"> 
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Sample Content</td>
+                                    <td>Accepted</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Sample Content</td>
+                                    <td>Accepted</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sample Content</td>
+                                    <td>Accepted</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="modal__title" id="modal-1-title">
+                        Notice
+                    </h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <strong>Title</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio voluptatum saepe quibusdam nesciunt rem quas, dolorem earum ipsa iste vitae odio eveniet voluptate sint perspiciatis quidem aliquam voluptas! Non!</p>
+                </main>
+                <footer class="modal__footer">
+                <!-- <button class="modal__btn modal__btn-primary">Continue</button> -->
+                <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./action.js"></script>
+</body>
+</html>

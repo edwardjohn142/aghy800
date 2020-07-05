@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="micro.css">
+
+</head>
+
+<body>
+    <div class="header main">
+       <div class="layout">
+            <ul class="layout  justify-center">
+                <li class="active" ><a href="/">Home</a></li>
+                <li><a href="/withdraw.html" class="">Transactions</a></li>
+                <li ><a href="/security.html" class="">Information</a></li>
+            </ul>
+            <div class="layout justify-end grow-shrink-0 align-center">
+                <!-- <button type="button" class="">Free trial</button> -->
+                <div class="btn-wrap">
+                    <button onclick="openModal('modal_login')">log in</button><button onclick="openModal('modal_register')">registered</button>
+                </div>
+            </div>
+       </div>
+    </div>
+    <div class="banner">
+        <div class="banner-container">
+            <div class="carousel-item active">
+                <div>
+                    <img src="./images/banner1.webp" alt="">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div>
+                    <img src="./images/banner2.webp" alt="">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div>
+                    <img src="./images/banner3.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="layout justify-center align-center">
+            <img src="./images/menu-left.png" alt="">
+            <div class="category active">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 28 28" id="jingxuan-normal"><path d="M25.98 10.577a1.04 1.04 0 00-.062-.124l-3.324-5.589-2.602 5.714h5.989v-.001zm-16.45 0h8.882L13.97 4.28l-4.44 6.297zM13.059 4h-6.27c-.244 0-.508.088-.732.232l2.684 5.89 4.318-6.122zm8.86.16C21.725 4.058 21.512 4 21.31 4h-6.429l4.32 6.123 2.716-5.963zm-12.64 7.324l4.68 14.511a.743.743 0 00.033.004l4.673-14.515H9.278zm-3.863-6.47l-3.234 5.438-.073.124h5.841L5.415 5.015zM2 11.485l.026.045h.048l.217.27 10.273 12.825-4.239-13.14H2zm24 0h-6.383l-4.345 13.492L25.827 11.8c.074-.093.131-.2.173-.315z" fill-rule="nonzero"></path></svg>
+                <div>精选</div>
+            </div>
+            <div class="divider"></div>
+            <div class="category">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 28 28" id="zhenren-normal"><path d="M22.114 21.853a4.202 4.202 0 00-.932.226 4.188 4.188 0 00-.478.225 1.23 1.23 0 01.025-.552c.033-.167.1-.343.201-.527.1-.184.269-.368.504-.552.42-.285.919-.46 1.498-.528.58-.066 1.12 0 1.624.201s.899.548 1.184 1.042c.285.494.336 1.167.151 2.02a4.325 4.325 0 01-.932 1.871c-.47.56-1.095.992-1.876 1.293-.78.301-1.7.443-2.757.427-1.058-.017-2.241-.251-3.551-.703-.907-.318-1.62-.716-2.14-1.193-.521-.477-.911-.966-1.172-1.468-.26-.502-.415-.975-.465-1.418-.05-.444-.06-.791-.026-1.042s.139-.56.315-.93c.176-.367.357-.719.542-1.053.218-.402.461-.812.73-1.23a8.19 8.19 0 00.352-.628c.084-.184.152-.368.202-.552a.938.938 0 000-.527c-.168-.436-.378-.77-.63-1.005a3.177 3.177 0 00-.73-.527 2.7 2.7 0 00-.881-.2 6.067 6.067 0 01-1.159-.151 6.042 6.042 0 01-.894-.327 1.267 1.267 0 01-.642-.627 1.563 1.563 0 01-.189-.879c.025-.301.084-.598.177-.89.092-.294.188-.574.29-.842.1-.268.15-.502.15-.703 0-.535-.285-.912-.856-1.13-.739-.184-1.293-.259-1.662-.225-.37.033-.63.104-.78.213-.152.109-.227.21-.227.301v.038c0 .234.029.535.088.904.059.368.03.72-.088 1.054a2.3 2.3 0 01-.34.565 6.655 6.655 0 00-.366.49c-.134.217-.247.405-.34.564-.092.16-.13.264-.113.314.034.067.114.113.24.138.125.025.222.054.289.088.084.05.139.13.164.238a.529.529 0 00.189.289c.167.167.268.31.302.427a.311.311 0 010 .175c0 .134.008.293.025.477.017.151.038.323.063.515.025.193.063.38.113.565.101.435.219.74.353.916a.83.83 0 00.49.326c.194.042.425.047.693.013a8.12 8.12 0 01.983-.05c.285.017.579.025.88.025.303 0 .572.067.807.2.235.135.42.319.554.553.134.234.243.469.327.703.067.284.118.577.151.879.05.384.076.77.076 1.154 0 .335-.017.699-.05 1.092a4.76 4.76 0 01-.252 1.168c-.286.786-.705 1.372-1.26 1.757a4.543 4.543 0 01-1.787.753c-.672.134-1.31.15-1.914.05a6.04 6.04 0 01-1.637-.502 3.936 3.936 0 01-1.196-.853c-.311-.335-.5-.67-.567-1.005a2.278 2.278 0 01-.013-.79 4.644 4.644 0 01.491-1.443c.118-.218.219-.428.303-.628a2.96 2.96 0 00.277-.841 1.875 1.875 0 000-.615 1.318 1.318 0 00-.202-.502c-.15-.168-.31-.343-.478-.528a64.574 64.574 0 01-.428-.54 2.86 2.86 0 01-.378-.64c-.336-.686-.512-1.322-.529-1.907 0-.251.004-.557.013-.917.008-.36.07-.698.188-1.016.101-.268.349-.624.743-1.067.395-.444.836-1.017 1.322-1.72a5.744 5.744 0 00.529-1.707c.017-.134.025-.226.025-.276a6.67 6.67 0 00-.025-.552l-.05-.628c0-.1-.008-.267-.025-.502a2.857 2.857 0 01.063-.778c.058-.284.163-.573.314-.866.152-.293.387-.556.706-.79.251-.185.55-.315.894-.39a6.14 6.14 0 01.97-.138 8.288 8.288 0 011.107.025c.32-.117.655-.209 1.007-.276.303-.067.655-.125 1.058-.176.403-.05.823-.075 1.26-.075 1.46.033 2.685.255 3.676.665.99.41 1.805.912 2.443 1.506.638.595 1.125 1.239 1.46 1.933.336.695.58 1.34.73 1.933.152.594.24 1.096.265 1.507.025.41.038.623.038.64.017.284.117.544.302.778.185.234.399.473.642.715.244.243.495.49.756.74.26.252.482.528.667.83.353.635.546 1.204.58 1.706.033.502-.034.946-.202 1.33a2.893 2.893 0 01-.705.992 5.805 5.805 0 01-1.775 1.117c-.261.1-.425.168-.492.201-.554.251-.978.527-1.272.829-.293.3-.49.602-.591.903-.101.302-.122.594-.063.879.058.284.18.527.365.728.117.15.268.276.453.377.185.1.374.175.567.225.193.05.377.08.554.088.176.009.323-.004.44-.037a1.17 1.17 0 00.668-.364c.176-.193.281-.398.315-.615a.663.663 0 00-.139-.553c-.126-.15-.348-.217-.667-.2z" fill-rule="nonzero"></path></svg>
+                <div>真人</div>
+            </div>
+            <div class="divider"></div>
+            <div class="category">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 28 28" id="dianyou-normal"><path d="M7.691 17.124a.336.336 0 00-.338.331c0 .182.152.331.338.331h9.904a.336.336 0 00.338-.33.336.336 0 00-.338-.332H7.691zm13.978 1.754h.499c.27 0 .529.053.766.147v-4.476a1.39 1.39 0 01-.784-1.244c0-.77.638-1.394 1.425-1.394S25 12.535 25 13.305a1.39 1.39 0 01-.784 1.244v6.332c0 1.102-.921 2.004-2.048 2.004h-.499v-4.007zM9.63 22.9c.165.273.322.547.714.547h4.27c.393 0 .55-.275.715-.547l.86-1.415c.167-.272-.32-.546-.714-.546H9.483c-.393 0-.88.274-.715.546l.86 1.415zm-.92-18.508a.801.801 0 00-.808.79v.859c0 .434.363.79.808.79h7.54a.801.801 0 00.807-.79v-.86a.801.801 0 00-.808-.789h-7.54zm7.103 5.992a.801.801 0 00-.808.79v4.099c0 .434.364.79.808.79h2.09a.801.801 0 00.807-.79v-4.099a.801.801 0 00-.808-.79h-2.089zm-4.378 0a.801.801 0 00-.808.79v4.099c0 .434.364.79.808.79h2.09a.801.801 0 00.807-.79v-4.099a.801.801 0 00-.808-.79h-2.09zm-4.378 0a.801.801 0 00-.808.79v4.099c0 .434.363.79.808.79h2.089a.801.801 0 00.808-.79v-4.099a.801.801 0 00-.808-.79h-2.09zM18.42 7.776c1.409.08 2.536 1.232 2.536 2.628V26.21c0 .435-.364.79-.808.79H4.808A.801.801 0 014 26.21V10.404c0-1.396 1.127-2.548 2.536-2.628V5.633C6.536 4.185 7.748 3 9.229 3h6.5c1.48 0 2.692 1.185 2.692 2.633v2.143z" fill-rule="nonzero"></path></svg>
+                <div>电游</div>
+            </div>
+            <div class="divider"></div>
+            <div class="category">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 28 28" id="tiyu-normal"><path d="M10.156 14.929L14 12.143l3.844 2.786-1.46 4.5h-4.755l-1.473-4.5zM14 4c1.625 0 3.179.317 4.66.95 1.483.635 2.76 1.488 3.831 2.559 1.072 1.071 1.924 2.348 2.558 3.83A11.73 11.73 0 0126 16a11.73 11.73 0 01-.95 4.66c-.635 1.483-1.488 2.76-2.559 3.831-1.071 1.072-2.348 1.924-3.83 2.558A11.73 11.73 0 0114 28a11.73 11.73 0 01-4.66-.95c-1.483-.635-2.76-1.488-3.831-2.559-1.071-1.071-1.924-2.348-2.558-3.83A11.73 11.73 0 012 16c0-1.625.317-3.179.95-4.66.635-1.483 1.488-2.76 2.559-3.831C6.58 6.438 7.857 5.585 9.339 4.95A11.73 11.73 0 0114 4zm8.58 18.677c1.423-1.986 2.134-4.207 2.134-6.663v-.044l-1.46 1.306-3.438-3.287.902-4.74 1.92.175c-1.433-2.015-3.29-3.395-5.572-4.138l.759 1.82-4.11 2.333-4.111-2.333.759-1.82c-2.282.743-4.14 2.123-5.572 4.138l1.934-.176.888 4.74-3.438 3.288-1.46-1.306v.044c0 2.456.71 4.677 2.133 6.663l.43-1.937 4.67.587 1.99 4.374-1.661 1.012c1.117.382 2.263.573 3.437.573 1.175 0 2.32-.191 3.438-.573l-1.662-1.012 1.991-4.374 4.67-.587.43 1.937z" fill-rule="nonzero"></path></svg>
+                <div>体育</div>
+            </div>
+            <div class="divider"></div>
+            <div class="category">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 28 28" id="qipai-normal"><g fill-rule="nonzero"><path d="M6.327 22.971V7.496c0-.168.027-.334.048-.496L2.258 8.444c-.955.334-1.479 1.45-1.169 2.479L5.53 25.64C5.78 26.47 6.502 27 7.272 27c.19 0 .38-.032.56-.096L9 26.49c-1.512-.325-2.673-1.798-2.673-3.519z"></path><path d="M8.497 20.772l4.347-14.355c.044-.145.096-.321.156-.417H8.818C7.834 6 7 6.871 7 7.927v15.098C7 24.08 7.834 25 8.818 25h1.428c-1.484-.768-2.262-2.533-1.749-4.228z"></path><path d="M26.628 8.389l-10.2-3.293a1.993 1.993 0 00-2.503 1.267L9.097 21.125a1.976 1.976 0 001.275 2.486l10.2 3.293a1.993 1.993 0 002.503-1.267l4.828-14.762a1.976 1.976 0 00-1.275-2.486zM17.093 19.93c-4.81-5.803-2.008-8.687-.234-8.68 1.494.008 2.103 1.073 2.362 2.168.8-.872 1.98-1.242 3.194-.375 1.44 1.028 2.003 4.997-5.322 6.887z"></path></g></svg>
+                <div>棋牌</div>
+            </div>
+            <div class="divider"></div>
+            <div class="category">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 28 28" id="caipiao-normal"><g fill-rule="nonzero"><path d="M14 4C7.373 4 2 9.373 2 16s5.373 12 12 12 12-5.373 12-12S20.627 4 14 4zm-2.4 19.8a7.2 7.2 0 110-14.4 7.2 7.2 0 010 14.4zm8.25-12.75c-1.29-1.29-1.95-2.718-1.47-3.192.48-.474 1.902.18 3.192 1.47 1.29 1.29 1.95 2.718 1.47 3.192-.48.474-1.902-.18-3.192-1.47z"></path><path d="M12.851 16.395c1.136-.365 1.722-1.051 1.76-2.057-.112-1.41-1.137-2.188-3.087-2.338-1.983.187-3.065 1.151-3.246 2.893a2.45 2.45 0 001.654 2.494c-1.235.482-1.879 1.261-1.932 2.337.111 1.447 1.191 2.207 3.253 2.276 2.39-.067 3.639-1.012 3.746-2.837.033-1.25-.683-2.173-2.148-2.768zm-1.327-3.84c1.03.037 1.562.623 1.599 1.783.032.68-.28 1.33-.827 1.727-1.506-.636-2.222-1.361-2.148-2.176.006-.362.155-.706.413-.956.259-.25.605-.386.963-.378zm-.16 9.009c-1.177-.075-1.794-.761-1.852-2.058a1.961 1.961 0 01.994-1.727c.1.01.194.049.271.113a.16.16 0 00.111.056l.902.498c.808.412 1.19.93 1.154 1.559a1.581 1.581 0 01-1.58 1.559z"></path></g></svg>
+                <div>彩票</div>
+            </div>
+            <img src="./images/menu-right.png" alt="">
+        </div>
+    </div>
+    <div class="game layout align-center justify-center">
+        <div class="left">
+            <div>
+                <div class="title">Baccarat</div>
+                <div class="tips">
+                    OZ Entertainment
+                </div>
+                <!-- <div class="button">
+                    <span>AG女郎</span>
+                    <span>冲田杏梨</span>
+                </div> -->
+                <div class="layout align-center justify-center game-mask">
+                    <button class="el-button">登录试玩</button>
+                </div>
+                <div class="tag"></div>
+            </div>
+            <div class="layout lower">
+                <div class="">
+                    <img src="./images/game4.webp" alt="">
+                    <div class="game-title">
+                        OddEven
+                        <span>160px x 197px</span>
+                    </div>
+                    <div class="layout align-center justify-center game-mask">
+                        <button class="el-button">Go</button>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="./images/game4.webp" alt="">
+                    <div class="game-title">
+                        NineGame
+                        <span>160px x 197px</span>
+                    </div>
+                    <div class="layout align-center justify-center game-mask">
+                        <button class="el-button">Go</button>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="./images/game4.webp" alt="">
+                    <div class="game-title">
+                        GoStop
+                        <span>160px x 197px</span>
+                    </div>
+                    <div class="layout align-center justify-center game-mask">
+                        <button class="el-button">Go</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="item-1">
+                <div class="title">EZ Games</div>
+                <div class="tips">中文美女主播 陪您high聊</div>
+                <div class="layout align-center justify-center game-mask">
+                    <button class="el-button">立即参与</button>
+                </div>
+                <div class="tag"></div>
+            </div>
+            <div class="item-2">
+                <div class="title">Midas</div>
+                <div class="tips">中文美女主播 陪您high聊</div>
+                <div class="layout align-center justify-center game-mask">
+                    <button class="el-button">立即参与</button>
+                </div>
+                <div class="tag"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <img src="./images/game4.webp" alt="">
+                <div class="game-tip">
+                    88 Casino
+                    <span>热门</span>
+                </div>
+                <div class="layout align-center justify-center game-mask">
+                    <button class="el-button">免费试玩</button>
+                </div>
+            </div>
+            <div>
+                <img src="./images/game4.webp" alt="">
+                <div class="game-tip">
+                    Evolution
+                    <span>热门</span>
+                </div>
+                <div class="layout align-center justify-center game-mask">
+                    <button class="el-button">免费试玩</button>
+                </div>
+            </div>
+            <div>
+                <img src="./images/game4.webp" alt="">
+                <div class="game-tip">
+                    Solaire
+                    <span>热门</span>
+                </div>
+                <div class="layout align-center justify-center game-mask">
+                    <button class="el-button">免费试玩</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rank layout justify-center">
+        <div class="content">
+            <div>
+                <div class="item ">
+                    <div>
+                        <span class="title">Event</span>
+                        <div class="table">
+                            <div class="header">
+                                <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 467px;">
+                                    <colgroup>
+                                        <col name="el-table_1_column_1" width="120">
+                                        <col name="el-table_1_column_2" width="120">
+                                        <col name="el-table_1_column_3" width="120">
+                                        <col name="el-table_1_column_4" width="107">
+                                        <col name="gutter" width="0">
+                                    </colgroup>
+                                    <thead class="has-gutter">
+                                        <tr class="">
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_1     is-leaf">
+                                                <div class="cell">排名</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_2     is-leaf">
+                                                <div class="cell">用户名</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_3     is-leaf">
+                                                <div class="cell">今日盈利</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_1_column_4     is-leaf">
+                                                <div class="cell">盈利率</div>
+                                            </th>
+                                            <th class="gutter" style="width: 0px; display: none;"></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="body">
+                                <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 467px;">
+                                    <colgroup>
+                                        <col name="el-table_1_column_1" width="120">
+                                        <col name="el-table_1_column_2" width="120">
+                                        <col name="el-table_1_column_3" width="120">
+                                        <col name="el-table_1_column_4" width="107">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_1   none-bottom rank-0-0">
+                                                <div class="cell">
+                                                    <div>1</div>
+                                                </div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_2   none-bottom rank-1-0">
+                                                <div class="cell">******39</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_3   none-bottom rank-2-0">
+                                                <div class="cell">950,000.00</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_4   none-bottom rank-3-0">
+                                                <div class="cell">100%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_1   none-bottom rank-0-1">
+                                                <div class="cell">
+                                                    <div>2</div>
+                                                </div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_2   none-bottom rank-1-1">
+                                                <div class="cell">*******64</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_3   none-bottom rank-2-1">
+                                                <div class="cell">190,600.00</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_4   none-bottom rank-3-1">
+                                                <div class="cell">100%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_1   none-bottom rank-0-2">
+                                                <div class="cell">
+                                                    <div>3</div>
+                                                </div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_2   none-bottom rank-1-2">
+                                                <div class="cell">*******ng</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_3   none-bottom rank-2-2">
+                                                <div class="cell">110,000.00</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_4   none-bottom rank-3-2">
+                                                <div class="cell">1100%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_1   none-bottom rank-0-3">
+                                                <div class="cell">
+                                                    <div>4</div>
+                                                </div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_2   none-bottom rank-1-3">
+                                                <div class="cell">******er</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_3   none-bottom rank-2-3">
+                                                <div class="cell">100,020.00</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_4   none-bottom rank-3-3">
+                                                <div class="cell">100%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_1   none-bottom rank-0-4">
+                                                <div class="cell">
+                                                    <div>5</div>
+                                                </div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_2   none-bottom rank-1-4">
+                                                <div class="cell">********42</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_3   none-bottom rank-2-4">
+                                                <div class="cell">65,000.00</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_4   none-bottom rank-3-4">
+                                                <div class="cell">100%</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_1   none-bottom rank-0-5">
+                                                <div class="cell">
+                                                    <div>6</div>
+                                                </div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_2   none-bottom rank-1-5">
+                                                <div class="cell">*****09</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_3   none-bottom rank-2-5">
+                                                <div class="cell">50,000.00</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_1_column_4   none-bottom rank-3-5">
+                                                <div class="cell">100%</div>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item active">
+                    <div>
+                        <span class="title">Notice</span>
+                        <!-- <span class="tips">（数据每小时更新）</span> -->
+                        <div class="table">
+                            <div class="header">
+                                <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" >
+                                    <colgroup>
+                                        <col name="el-table_2_column_5" width="130">
+                                        <col name="el-table_2_column_6" width="180">
+                                        <col name="el-table_2_column_7" width="116">
+                                        <col name="gutter" width="0">
+                                    </colgroup>
+                                    <thead class="has-gutter">
+                                        <tr class="">
+                                            <th colspan="1" rowspan="1" class="el-table_2_column_5     is-leaf">
+                                                <div class="cell">No</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_2_column_6     is-leaf">
+                                                <div class="cell">Content</div>
+                                            </th>
+                                            <th colspan="1" rowspan="1" class="el-table_2_column_7     is-leaf">
+                                                <div class="cell">Date</div>
+                                            </th>
+                                        
+                                            <th class="gutter" style="width: 0px; display: none;"></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="body">
+                                <table cellspacing="0" cellpadding="0" border="0" class="el-table__body text-left" >
+                                    <colgroup>
+                                        <col name="el-table_2_column_5" width="130">
+                                        <col name="el-table_2_column_6" width="180">
+                                        <col name="el-table_2_column_7" width="116">
+                                        <col name="gutter" width="0">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_5   none-bottom">
+                                                <div class="cell">1</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_6   none-bottom">
+                                                <div class="cell">Sample Content</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_7   none-bottom">
+                                                <div class="cell">20-07-01</div>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_5   none-bottom">
+                                                <div class="cell">2</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_6   none-bottom">
+                                                <div class="cell">Sample Content2</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_7   none-bottom">
+                                                <div class="cell">20-07-01</div>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_5   none-bottom">
+                                                <div class="cell">3</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_6   none-bottom">
+                                                <div class="cell">Sample Content</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_7   none-bottom">
+                                                <div class="cell">20-07-01</div>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_5   none-bottom">
+                                                <div class="cell">4</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_6   none-bottom">
+                                                <div class="cell">Sample Content</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_7   none-bottom">
+                                                <div class="cell">20-07-01</div>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_5   none-bottom">
+                                                <div class="cell">5</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_6   none-bottom">
+                                                <div class="cell">Sample Content</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_7   none-bottom">
+                                                <div class="cell">20-07-01</div>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="el-table__row">
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_5   none-bottom">
+                                                <div class="cell">6</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_6   none-bottom">
+                                                <div class="cell">Sample Content</div>
+                                            </td>
+                                            <td rowspan="1" colspan="1" class="el-table_2_column_7   none-bottom">
+                                                <div class="cell">20-07-01</div>
+                                            </td>
+                                            
+                                        </tr>
+                                        <!---->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+    <div class="hot layout justify-center d-none">
+        <div class="left">
+            <div class="title">环亚热门</div>
+            <div class="layout item align-center justify-space-between">
+                <img src="./images/message1.webp" alt="">
+                <span class="tips">天佑武汉！环亚娱乐联手曾志伟向疫情灾区捐款100万</span>
+                <span class="date">2020-03-16 12:00</span>
+            </div>
+            <div class="layout item align-center justify-space-between">
+                <img src="./images/message2.webp" alt="">
+                <span class="tips">环亚2019年年度简报出炉！</span>
+                <span class="date">2020-01-15 00:00</span>
+            </div>
+            <div class="layout item align-center justify-space-between">
+                <img src="./images/message3.webp" alt="">
+                <span class="tips">环亚娱乐会员与世界顶级球星挥杆澳门</span>
+                <span class="date">2019-11-08 17:51</span>
+            </div>
+            <div class="layout item align-center justify-space-between">
+                <img src="./images/message4.webp" alt="">
+                <span class="tips">pc改版啦，给您不同的体验，非同凡响&</span>
+                <span class="date">2019-09-27 20:18</span>
+            </div>
+            <div class="layout item align-center justify-space-between">
+                <img src="./images/message5.webp" alt="">
+                <span class="tips">环亚大师赛隆重开幕！</span>
+                <span class="date">2019-07-01 17:34</span>
+            </div>
+            <div class="layout item align-center justify-space-between">
+                <img src="./images/message6.webp" alt="">
+                <span class="tips">环亚携手Asia Gaming参加2018亚洲国际博彩娱乐展</span>
+                <span class="date">2018-05-15 00:00</span>
+            </div>
+        </div>
+        <div class="slice"></div>
+        <div class="right">
+            <div class="title">环亚大神专栏</div>
+            <div class="swipper-container">
+                <div class="swipper-wrapper">
+                    <div class="item">
+                        <div class="board">
+                            <div class="title">AG旗舰</div>
+                            <div class="tips">玩家 ****39，在百家乐盈利</div>
+                            <div class="amount">950,000.00</div>
+                            <div class="detail">盈利金额</div>
+                            <div class="footer layout align-center">
+                                <span class="follow">去跟注</span>
+                                <i></i>
+                                <span class="date">2020-06-15 11:48</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="board">
+                            <div class="title">AG旗舰</div>
+                            <div class="tips">玩家 ****39，在百家乐盈利</div>
+                            <div class="amount">950,000.00</div>
+                            <div class="detail">盈利金额</div>
+                            <div class="footer layout align-center">
+                                <span class="follow">去跟注</span>
+                                <i></i>
+                                <span class="date">2020-06-15 11:48</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="board">
+                            <div class="title">AG旗舰</div>
+                            <div class="tips">玩家 ****39，在百家乐盈利</div>
+                            <div class="amount">950,000.00</div>
+                            <div class="detail">盈利金额</div>
+                            <div class="footer layout align-center">
+                                <span class="follow">去跟注</span>
+                                <i></i>
+                                <span class="date">2020-06-15 11:48</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title" style="margin-top: 40px; margin-bottom: 30px;">环亚简报</div>
+            <div class="list">
+                <div class="item">
+                    <span class="content">【重要公告】全新数字货币系统上线，人民币支付通道即将停止</span>
+                    <span class="time">5 天前</span>
+                </div>
+                <div class="item">
+                    <span class="content">【环亚封神榜】2020/06期—河北任先生创8.1亿当之无愧</span>
+                    <span class="time">12 天前</span>
+                </div>
+                <div class="item">
+                    <span class="content">【中奖喜报】中84万大奖是种什么体验？</span>
+                    <span class="time">19 天前</span>
+                </div>
+                <div class="item">
+                    <span class="content">【国际厅】快从壕王XIN哥手中抢巨额宝箱！</span>
+                    <span class="time">29 天前</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="suspension">
+        <div class="vip">
+            <img src="./images/float1.png" alt="">
+        </div>
+        <span>
+            <div>
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 28 28" id="kefu">
+                        <path
+                            d="M6 22a1 1 0 01-1-1V5a1 1 0 011-1h16a1 1 0 011 1v18a1 1 0 01-1.447.894L17.763 22H6zM7 6v14h11a1 1 0 01.447.106L21 21.382V6H7zm1.553 10.895a1 1 0 01.894-1.79C10.63 15.696 12.145 16 14 16s3.37-.303 4.553-.894a1 1 0 01.894 1.79c-1.484.741-3.302 1.104-5.447 1.104s-3.963-.363-5.447-1.104z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span>在线客服</span>
+            </div>
+        </span>
+        <span>
+            <div>
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 28 28" id="qrcode">
+                        <path
+                            d="M5 5h8v8H5V5zm0 10h8v8H5v-8zM15 5h8v8h-8V5zm0 16h2v2h-2v-2zm6 0h2v2h-2v-2zm-4-2h4v2h-4v-2zm-2-4h2v4h-2v-4zm6 0h2v4h-2v-4zM7 7v4h4V7H7zm0 10v4h4v-4H7zM17 7v4h4V7h-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span>在线客服</span>
+            </div>
+        </span>
+        <span>
+            <div>
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 28 28" id="gengduo">
+                        <path
+                            d="M14 16a2 2 0 110-4 2 2 0 010 4zm-8 0a2 2 0 110-4 2 2 0 010 4zm16 0a2 2 0 110-4 2 2 0 010 4zm-8-8a2 2 0 110-4 2 2 0 010 4zm0 12a2 2 0 110 4 2 2 0 010-4z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span>在线客服</span>
+            </div>
+        </span>
+    </div>
+
+    <div class="footer main ">
+        <div class="layout align-center justify-space-between ">
+            <div class="notice-bar">
+                <svg viewBox="0 0 18 17" id="notice">
+                    <path
+                        d="M9.935.09a.858.858 0 00-.927.104c-1.03.78-3.655 3.064-4.118 3.48H1.493C.669 3.674 0 4.297 0 5.128v5.349c0 .779.67 1.454 1.493 1.454h2.882c.618.519 3.45 3.064 4.582 3.946.154.104.36.208.515.208.154 0 .257-.052.411-.104.464-.207.875-.883.875-1.454V1.545C10.81.973 10.398.298 9.935.09zm-.103 14.437c0 .208-.155.468-.257.571-1.236-.986-4.53-3.946-4.582-3.946a.465.465 0 00-.36-.156H1.544a.518.518 0 01-.514-.52V5.129c0-.26.205-.52.514-.52h3.5a.391.391 0 00.258-.103c.103 0 .154-.052.257-.104.052-.052 2.935-2.597 4.067-3.428.103.104.257.364.257.572v12.982h-.051zm4.581-6.543c-.103-1.921-1.338-3.168-1.39-3.22-.154-.155-.411-.155-.566.052-.154.208-.103.52.052.675 0 0 .978 1.039 1.08 2.545.052 1.039-.308 2.025-1.08 3.064-.155.208-.155.52.051.675.103.104.155.104.257.104.103 0 .206-.052.31-.156.926-1.143 1.338-2.44 1.286-3.739zm3.14-2.44c-.772-2.078-2.213-3.324-2.316-3.376a.548.548 0 00-.72.052.446.446 0 00.05.675s1.339 1.142 2.008 2.96c.412 1.09.515 2.18.31 3.271-.258 1.403-.927 2.753-2.111 4.103-.155.208-.155.52.051.675.103.052.206.104.309.104a.582.582 0 00.412-.156c1.287-1.506 2.059-3.012 2.316-4.57.257-1.246.155-2.492-.309-3.739z"
+                        fill-rule="nonzero"></path>
+                </svg>
+            </div>
+            <div class="content">
+                <div class="">
+                    尊敬的会员：北京时间【6月16日9:00-10:30】【易胜博】游戏厅进行维护，请在维护前10分钟，根据您的喜好将额度带入其他游戏厅，以免因额度停留在维护的游戏厅，维护期间，无法游戏或转移账户额度，给您带来的不便敬请谅解！尊敬的会员：【中国人民银行】将于北京时间【5月24日、7月26日、9月20日、10月25日、11月22日00:00—6:00】进行系统升级维护，维护期间将会影响存款、取款、跨行业务，在此期间将无法查询存款、以及支付您的取款，请提前做好资金安排尽量错开此时间段，感谢您的理解和支持！尊贵的会员，因菲律宾政府防疫政策，网站真人游戏中的【环亚厅、国际厅、旗舰厅、竞咪厅、包桌、多台】将暂停开放;【AG锦标赛】和【环亚大师赛】暂时停赛。仅保留【欧洲厅、直播厅】，恢复时间待定，请您先体验电子游戏、捕魚王、街机电玩，很抱歉带来不便，祝您盈利多多。尊敬的会员：【官方郑重提示】网站QQ/微信专员不提供添任何转账的充值方式，存款方式均在充值页面或者联系在线客服直接获取，避免诈骗集团利用不法途径进行诈骗，充值请与在线客服或免费通话核实，请提高警惕、保护自身资金安全，感谢您的理解和支持！尊敬的会员：【中国邮政储蓄银行】晚间【22:00--次日01:00】进行例行盘点，盘点期间将会影响存款、跨行业务，在此期间将无法查询存款明细，请提前做好资金安排尽量错开此时间段，感谢您的理解和支持！尊敬的会员：每晚22:30-1:30是中信银行的盘点时间，22:30-00:30是华夏银行结算盘点时间，00:00-00:50是农行结算盘点时间，00:10—01:10是招行盘点时间，00:00—01:45是交行盘点时间，在维护期间无法查询对应银行存、取款，请提前做好资金安排尽量错开此时间段，谢谢您的理解和支持！
+
+                </div>
+            </div>
+            <button class="btn1"><span>客户端下载</span></button>
+            <button class="btn2"><span> 环亚集团</span></button>
+        </div>
+    </div>
+
+    <div class="modal  micromodal-slide" id="modal_login" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container index" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+               <div class="wrapper">
+                <header class="modal__header">
+                    <h2 class="modal__title" id="modal-1-title">
+                        Login
+                    </h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <div class="form-group">
+                                <div>
+                                    <input class="custom-input" type="text" placeholder="Username">
+                                </div>
+                                
+                                <div>
+                                    <input class="custom-input" type="text" placeholder="Password">
+                                </div>
+                                <div class="action">
+                                    <button class="login">Login</button>
+                                </div>
+                                <div class="no-account">
+                                    <a></a>
+                                </div>
+                    </div>
+            
+                </main>
+               </div>
+
+                <div class="login-right">
+                    <h3>image</h3>
+                    <label for="">350 x 390</label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal micromodal-slide" id="modal_register" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container index" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+               <div class="wrapper">
+                <header class="modal__header">
+                    <h2 class="modal__title" id="modal-1-title">
+                        Register
+                    </h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+
+                    <div class="row-main">
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Nickname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-main">
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-main">
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Bank">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-main">
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Account Name">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Account Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-main">
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Agent">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input class="custom-input" type="text" placeholder="Pin">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="">
+                            <div class="text-right action" style="margin-top: 30px;">
+                            <button class="custom-button">Register</button>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+            
+                </main>
+               </div>
+
+     
+            </div>
+        </div>
+    </div>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./action.js"></script>
+    <script src="./micromodal.min.js"></script>
+</body>
+
+</html>

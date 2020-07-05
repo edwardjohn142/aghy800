@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.dashboard.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <div class="header main">
+        <div class="layout">
+             <ul class="layout  justify-center">
+                <li ><a href="/">Home</a></li>
+                <li class="active"><a href="/withdraw.html" class="">Transactions</a></li>
+                <li ><a href="/security.html" class="">Information</a></li>
+             </ul>
+
+        </div>
+    </div>
+    <div class="main-layout">
+        <div class="header row">
+            <div class="side layout">
+                <div class="logo"></div>
+            </div>
+            <div class="center">
+               <div class="banner"></div>
+            </div>
+        </div>
+        <div class="main-dashboard">
+            <div class="side layout">
+                <ul>
+                    <li ><a href="withdraw.html">Withdraw</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li class="active"><a href="point.html">Point Management</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="notice.html">Notice</a></li>
+                    <li><a href="guide.html">Game Guide</a></li>
+                </ul>
+            </div>
+            <div class="center">
+                <div class="wrapper">
+                    <div class="tab">
+                        <ul>
+                            <li data-target="#transaction" class="active tab-li"><a href="javscript:void(0)">Transaction</a></li>
+                            <li data-target="#table" class="tab-li"><a href="javscript:void(0)">History</a></li>
+                            <li data-target="#status" class="tab-li"><a href="javscript:void(0)">Exchange Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-container">
+                        <div class="tab-content active" id="transaction">
+                            
+                            <div class="row-main">
+                                <div class="col layout">
+                                    <span class="text-dark label">Enter Amount</span>
+                                    <input type="text" class="input-strong">
+                                </div>
+                                <div class="col layout">
+                                    <div class="flex">
+                                        <div class="block"><a href="javascript:void(0)" class="button">1Won</a></div>
+                                        <div class="block"><a href="javascript:void(0)" class="button">3Won</a></div>
+                                        <div class="block"><a href="javascript:void(0)" class="button">5Won</a></div>
+                                        <div class="block"><a href="javascript:void(0)" class="button">10Won</a></div>
+                                        <div class="block"><a href="javascript:void(0)" class="button">30Won</a></div>
+                                        <div class="block"><a href="javascript:void(0)" class="button">50Won</a></div>
+                                        <div class="block"><a href="javascript:void(0)" class="button red">Clear</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-main">
+                                <div class="col layout">
+                                    <span class="text-dark label">Points</span>
+                                    <strong><span class="text-strong strong">2,000</span></strong>
+                                </div>
+                                <div class="col layout">
+                                    <div class="d-inline-block w-max mt-auto"><a href="javascript:void(0)" class="pull-right action-button">Exchange</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="table">
+                            <div class="custom-table header">
+                                <table>
+                                    <colgroup>
+                                        <col name="date" width="20%"> 
+                                        <col name="content" width="60%"> 
+                                        <col name="status" width="20%"> 
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="1" class="date">Date</th>
+                                            <th colspan="1" class="content">Exchange Amount</th>
+                                            <th colspan="1" class="status">Status</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="custom-table body">
+                                <table cellspacing="0">
+                                    <colgroup>
+                                        <col name="date" width="20%"> 
+                                        <col name="content" width="60%"> 
+                                        <col name="status" width="20%"> 
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>2020-07-02</td>
+                                            <td>2,000</td>
+                                            <td>Accepted</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-07-02</td>
+                                            <td>2,000</td>
+                                            <td>Accepted</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-07-02</td>
+                                            <td>2,000</td>
+                                            <td>Accepted</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="status">
+                            <div class="custom-table header">
+                                <table>
+                                    <colgroup>
+                                        <col name="date" width="20%"> 
+                                        <col name="content" width="30%"> 
+                                        <col name="status" width="30%"> 
+                                        <col name="tab4" width="20%"> 
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="1" class="date">Date</th>
+                                            <th colspan="1" class="content">Acquisition / Use</th>
+                                            <th colspan="1" class="status">Remaining points</th>
+                                            <th colspan="1" class="tab4">Route</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="custom-table body">
+                                <table cellspacing="0">
+                                    <colgroup>
+                                        <col name="date" width="20%"> 
+                                        <col name="content" width="30%"> 
+                                        <col name="status" width="30%"> 
+                                        <col name="tab4" width="20%"> 
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>2020-07-02</td>
+                                            <td>2,000</td>
+                                            <td>2,000</td>
+                                            <td>Accepted</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-07-02</td>
+                                            <td>2,000</td>
+                                            <td>2,000</td>
+                                            <td>Accepted</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-07-02</td>
+                                            <td>2,000</td>
+                                            <td>2,000</td>
+                                            <td>Accepted</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./action.js"></script>
+</body>
+</html>

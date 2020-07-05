@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.dashboard.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <div class="header main">
+        <div class="layout">
+             <ul class="layout  justify-center">
+                <li ><a href="/">Home</a></li>
+                <li class="active"><a href="/withdraw.html" class="">Transactions</a></li>
+                <li ><a href="/security.html" class="">Information</a></li>
+             </ul>
+
+        </div>
+    </div>
+    <div class="main-layout">
+        <div class="header row">
+            <div class="side layout">
+                <div class="logo"></div>
+            </div>
+            <div class="center">
+               <div class="banner"></div>
+            </div>
+        </div>
+        <div class="main-dashboard">
+            <div class="side layout">
+                <ul>
+                    <li ><a href="withdraw.html">Withdraw</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="point.html">Point Management</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="notice.html">Notice</a></li>
+                    <li class="active"><a href="guide.html">Game Guide</a></li>
+                </ul>
+            </div>
+            <div class="center">
+                <div class="wrapper">
+                    <div class="tab">
+                        <ul>
+                            <li data-target="#baccarat" class="active tab-li"><a href="javscript:void(0)">Baccarat</a></li>
+                            <li data-target="#oddeven" class="tab-li"><a href="javscript:void(0)">OddEven</a></li>
+                            <li data-target="#nine" class="tab-li"><a href="javscript:void(0)">NineGame</a></li>
+                            <li data-target="#gostop" class="tab-li"><a href="javscript:void(0)">GoStop</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-container">
+                        <div class="tab-content active" id="baccarat">
+                            <div class="row-main h-initial">
+                                <div class="col layout guide">
+                                    <div>
+                                        <p>Every day at 0:00 am, the game is reset and the game is played 1440 times a day</p>
+                                        <p>A card is called number 1, and J, Q, and K cards are called number 0. (We use 20 minutes / 3 point card.)</p>
+                                        <p>The total number of cards is calculated, so that the player with a unit number close to 9 wins.</p>
+                                        <p>It is an original baccarat game.</p><br>
+                                        <img src="./images/guide-bc.png" height="50px"  alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="tab-content " id="oddeven">
+                            <div class="row-main h-initial">
+                                <div class="col layout guide">
+                                    <div>
+                                        <p>Every day at 0:00 am, the game is reset and the game is played 1440 times a day.</p>
+                                        <p>Only cards A, 2, 3, 4, 5, 6, 7, 8, 9 and 10 except J, Q and K cards are used.</p>
+                                        <p>It is a game where you guess if the total value of hidden card and open card is odd or even.</p>
+                                        <br>
+                                        <img src="./images/guide-oe.png" height="50px" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content " id="nine">
+                            <div class="row-main h-initial">
+                                <div class="col layout guide">
+                                    <div>
+                                        <p>Every day at 0:00 am, the game is reset and the game is played 1440 times a day</p>
+                                        <p>Only numeric cards is used except for J, Q, and K cards. A card is equal to 1.</p>
+                                        <p>It is a game in which a player close to 9 wins by competing a banker card individually with each player.</p>
+                                        <br>
+                                        <img src="./images/guide-nn.png"  alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content " id="gostop">
+                            <div class="row-main h-initial">
+                                <div class="col layout guide">
+                                    <div>
+                                        <p>Every day at 0:00 am, the game is reset and the game is played 1440 times a day</p>
+                                        <p>Only 1 , 2, 3, 4, 5, 6, 7, 8, 9, 10 high-stop cards are used.</p>
+                                        <br>
+                                        <img src="./images/guide-gs.png" height="50px" alt="">
+                                        <br>
+                                        <p>The main game exists in two ways.</p>
+                                        <p>1. Winner Match / GO VS Stop Estimated Win, Go + Madame VS Stop + Madame</p>
+                                        <p>2. Odd-even match / GO & STOP each, high + Madame odd-even / stop + Madame odd-even.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./action.js"></script>
+</body>
+</html>
