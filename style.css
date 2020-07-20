@@ -30,7 +30,7 @@ body {
 }
 
 .wrapper{
-    padding: 0 15px 65px;
+    padding: 15px 15px 65px;
     background: transparent;
     color: #fff;
 }
@@ -438,6 +438,10 @@ body {
     line-height: 1;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .nav-bottom .item svg{
     width: 22px;
     height: 22px;
@@ -471,6 +475,10 @@ body {
     margin-bottom: 16px;
 }
 
+.dialog{
+    display: none;
+}
+
 .dialog img{
     position: fixed;
     right: 0;
@@ -484,6 +492,7 @@ body {
 .widget{
     transform: translateX(328px) translateY(399px) scale(1) translateZ(0px);
     position: fixed;
+    display: none;
     z-index: 1030;
     top: 0;
 }
@@ -513,4 +522,26 @@ body {
     padding: 0 1em;
     line-height: .875rem;
     position: relative;
+}
+
+.custom-input {
+    border-width: 0 0 1px;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0!important;
+    background: #fff;
+    border-color: #e0e1e2;
+    outline: none;
+    display: inline-block;
+    width: 100%;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    /* padding: 0 15px; */
+    box-sizing: border-box;
+}
+
+#modal_register input{
+    margin-bottom: 20px;
 }

@@ -1229,3 +1229,15 @@ display: none!important;
     /* border-bottom-color: rgba(248,248,249,.1); */
     /* border-bottom: 1px solid; */
 }
+
+.color-secondary{
+    color: #fec001
+}
+
+.color-primary{
+     color:#1ba345 ;
+}
+
+.color-danger{
+    color: #de3e44;
+}

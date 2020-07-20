@@ -395,3 +395,15 @@ input:focus, textarea:focus, select:focus{
 .d-block{
     display: block;
 }
+
+.color-secondary{
+    color: #fec001!important;
+}
+
+.color-primary{
+     color:#1ba345!important ;
+}
+
+.color-danger{
+    color: #de3e44!important;
+}
